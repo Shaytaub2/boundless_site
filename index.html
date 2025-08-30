@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boundless Ascent – הכנפיים של העסק שלך</title>
+  <!-- Google Fonts for modern Hebrew typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-r/21RzD9r4DzKSn5WkR5xOwO1IzEd2XZh4vjWjSa3xzE2hwyfLuqOqfsoqOqUWlpNnBs2xs9mK/cKGF1dX6ixg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Splash screen overlay with company branding -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <!-- Infinity icon from Font Awesome -->
+      <i class="fa-solid fa-infinity fa-5x"></i>
+      <!-- Company name -->
+      <h1>Boundless</h1>
+      <!-- Tagline in Hebrew: "Taking off with you to success" -->
+      <p>להצלחה איתך ממריאים</p>
+    </div>
+  </div>
+
+  <!-- Animated overlay for falling money and flying plane -->
+  <div id="animations"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>הכנפיים של העסק שלך <br> ממריאים איתך להצלחה</h1>
+      <p>
+        תוך פרק זמן קצר תקבלו סוכני AI שעובדים בשבילכם סביב לשעון, מנצלים יעילות ומהירות לשירות הלקוחות,
+        משפרים את ההכנסות מדי חודש ומעניקים לכם יתרון תחרותי.
+      </p>
+      <a href="#contact" class="cta-button">קבעו תהליך אפיון חינם עכשיו</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Features section -->
+    <section class="features">
+      <div class="feature">
+        <i class="fa-solid fa-rocket fa-3x"></i>
+        <h3>Taylor Made</h3>
+        <p>פלטפורמה בהתאמה אישית לצורכי העסק שלך. כלים אוטומטיים מודרניים כדי לחסוך זמן ולהגדיל מכירות.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-robot fa-3x"></i>
+        <h3>AI Agent</h3>
+        <p>סוכני בינה מלאכותית יעבדו עבורך 24/7, ידברו עם לקוחות וימקסמו את ההכנסות.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-chart-line fa-3x"></i>
+        <h3>ניתוח מעמיק</h3>
+        <p>דשבורדים וניתוח נתונים בזמן אמת לקבלת החלטות מהירות ונכונות יותר.</p>
+      </div>
+    </section>
+
+    <!-- Call to action / contact section -->
+    <section id="contact" class="contact">
+      <h2>רוצים להתחיל לשדרג את העסק?</h2>
+      <p>השאירו פרטים ונחזור אליכם עם הדגמה מותאמת אישית ללא עלות.</p>
+      <form action="#" method="post" onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">שם מלא</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">אימייל</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">הודעה</label>
+          <textarea id="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="submit-button">שליחה</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Boundless Ascent – כל הזכויות שמורות.</p>
+  </footer>
+
+  <!-- Sticky call‑to‑action button that appears after scrolling -->
+  <div id="sticky-cta" class="sticky-cta hidden">
+    <a href="#contact" class="cta-button">קבעו תהליך אפיון חינם</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
