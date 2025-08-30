@@ -1,0 +1,250 @@
+/* Reset basic margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alef', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f7f8fb;
+  color: #1f2937;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #6ec1e4, #c7d2fe);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #06b6d4;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0e7490;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.feature {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.contact {
+  background: #e0f2fe;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+.footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Sticky call‑to‑action button */
+.sticky-cta {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  z-index: 500;
+  /* Smoothly fade in/out */
+  transition: opacity 0.4s ease;
+}
+
+.sticky-cta.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sticky-cta:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Splash screen styling */
+/* Splash screen with branding and fade-out */
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0e7490;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1000;
+  /* Fade the splash out after a delay */
+  animation: fadeOut 1s forwards;
+  animation-delay: 2.5s;
+}
+
+.splash-content h1 {
+  font-size: 2.25rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.splash-content p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Container for dynamic animations (falling money and flying plane) */
+#animations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 900;
+  overflow: hidden;
+}
+
+/* Falling money animation */
+.falling-item {
+  position: absolute;
+  top: -10vh;
+  font-size: 1.5rem;
+  color: #ffc107; /* golden color to resemble coins */
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotateZ(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+/* Flying plane animation */
+.plane-item {
+  position: absolute;
+  left: -100px;
+  top: 60%;
+  font-size: 2rem;
+  color: #ffffff;
+  animation-name: fly;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100px) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw) translateY(-40vh);
+    opacity: 0;
+  }
+}
